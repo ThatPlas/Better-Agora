@@ -1,4 +1,4 @@
-# Better-Agora
+# Better Agora
 Avec les récents changements graphiques, Agora a souffert de quelques idées de design qui rendent l'expérience plus néfaste qu'autre chose. Ce dépôt recense tous les changements auquel j'ai pu penser pour pallier certaines d'entre elles.
 
 On compte notamment :
