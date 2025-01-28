@@ -1,5 +1,5 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 3,
   "name": "Better Agora",
   "description": "Extension permettant d'améliorer son expérience sur Agora",
   "version": "1.0",
