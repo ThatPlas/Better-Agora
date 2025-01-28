@@ -1,0 +1,56 @@
+nav.row div.prtl-onglet ul li.selected ::before {
+    content: "📍 ";
+    color: white;
+    display: inline;
+}
+
+nav.row div.prtl-onglet ul li span, nav.row div.prtl-onglet ul li a {
+    color:white!important;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
+}
+
+.info-collapse-root .info-collapse .info-collapse-entete .actions-collapse-news .info-collapse-menu-lien {
+    writing-mode: vertical-lr;
+    text-align: center;
+    background-image:url("")!important;
+    background-color:transparent;
+    font-weight:bolder;
+    font-size:36px;
+    text-decoration:none;
+    width:8px;
+    margin-left:-8px;
+ }
+ 
+.info-collapse-root .info-collapse .info-collapse-entete .actions-collapse-news .info-collapse-menu-lien:hover {
+     background-color:transparent!important;
+     color:#b2b2b2;
+ }
+ 
+.info-collapse-root .info-collapse .info-collapse-entete .info-collapse-datepubs {
+     margin-left:-1.5rem;
+     padding-left:0!important;
+ }
+ 
+ .info-collapse-root .info-collapse.utilisateur-lu .info-collapse-entete .info-collapse-titre {
+     cursor:pointer;
+ }
+ 
+.info-collapse-document ul li a {
+     padding-left:30px;
+ }
+ 
+ #conteneurPortail #main header.fixed-header {
+    position: fixed;
+    z-index: 8999;
+ }
+ 
+.prtl-tree-extra-leaf > td:nth-child(1) {
+     padding-left:60px;
+ }
+ 
+ #BB6387972114_50 .prtl-listrow:not(.prtl-tree-extra-leaf) {
+     font-weight:bold;
+ }
