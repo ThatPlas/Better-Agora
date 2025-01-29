@@ -5,3 +5,6 @@ On compte notamment :
 - Une meilleure visibilité des notes
 - Une interface visible et intégrée comme voulue (conflits de règles CSS réglés, améliorations de la visibilité)
 - Une navigation plus facile
+
+Note :
+Cette application n'est pas reliée à l'Université Catholique, l'ICL et est totalement indépendante

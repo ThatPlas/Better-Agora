@@ -1,17 +1,21 @@
+/* Onglet actif du menu remarquable plus facilement */
 nav.row div.prtl-onglet ul li.selected ::before {
     content: "📍 ";
     color: white;
     display: inline;
 }
 
+/* Texte des onglets inactifs du menu en blanc */
 nav.row div.prtl-onglet ul li span, nav.row div.prtl-onglet ul li a {
     color:white!important;
 }
 
+/* Résolution des conflits de police de titre */
 h1 {
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
 }
 
+/* Style vertical et gras des points du menu kebab */
 .info-collapse-root .info-collapse .info-collapse-entete .actions-collapse-news .info-collapse-menu-lien {
     writing-mode: vertical-lr;
     text-align: center;
@@ -22,35 +26,52 @@ h1 {
     text-decoration:none;
     width:8px;
     margin-left:-8px;
- }
+}
  
+ /* Nettoyage du bouton classique du menu kebab */
 .info-collapse-root .info-collapse .info-collapse-entete .actions-collapse-news .info-collapse-menu-lien:hover {
-     background-color:transparent!important;
-     color:#b2b2b2;
- }
+    background-color:transparent!important;
+    color:#b2b2b2;
+}
  
-.info-collapse-root .info-collapse .info-collapse-entete .info-collapse-datepubs {
-     margin-left:-1.5rem;
-     padding-left:0!important;
- }
+/* Change le curseur lorsqu'on survole les News Agora */
+.info-collapse-root .info-collapse.utilisateur-lu .info-collapse-entete .info-collapse-titre, .info-collapse-root .info-collapse.utilisateur-non-lu .info-collapse-entete .info-collapse-titre {
+    cursor:pointer;
+}
  
- .info-collapse-root .info-collapse.utilisateur-lu .info-collapse-entete .info-collapse-titre {
-     cursor:pointer;
- }
- 
-.info-collapse-document ul li a {
-     padding-left:30px;
- }
- 
- #conteneurPortail #main header.fixed-header {
+ /* Rendre la barre de navigation fixe afin d'éviter le saut lorsqu'on scroll */
+#conteneurPortail #main header.fixed-header {
     position: fixed;
     z-index: 8999;
- }
- 
+}
+
+ /* Séparation visuelle des notes et matières */
 .prtl-tree-extra-leaf > td:nth-child(1) {
-     padding-left:60px;
- }
+    padding-left:60px;
+}
  
+ /* Noms des matières en gras */
  #BB6387972114_50 .prtl-listrow:not(.prtl-tree-extra-leaf) {
-     font-weight:bold;
- }
+    font-weight:bold;
+}
+
+/* Refonte de la barre de scroll */
+/* Largeur */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Fond */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Barre */
+::-webkit-scrollbar-thumb {
+    background: #0c2340;
+}
+
+/* Survol de la barre */
+::-webkit-scrollbar-thumb:hover {
+    background: #1d3451;
+}
