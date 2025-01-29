@@ -14,14 +14,17 @@ function calculMoyenneMatiere(listeNotesDonnee) {
 var headPointer = document.head;
 headPointer.innerHTML += `<link rel="stylesheet" type="text/css" href="https://eythantournant.github.io/Better-Agora/css/main.css">`
 
-/* Rend la barre collante par défaut pour éviter les sauts de page */
-barreHaute = document.querySelector("#section0");
-barreHaute.classList.add("fixed-header");
 
-/* Fait en sorte que le logo renvoie à l'accueil */
+
+/* Dès que la page finit de charger */
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
         setTimeout(function() {
+            /* Rend la barre collante par défaut pour éviter les sauts de page */
+            barreHaute = document.querySelector("#section0");
+            barreHaute.classList.add("fixed-header");
+
+            /* Fait en sorte que le logo renvoie à l'accueil */
             logoUniv = document.querySelector("#header-main > div.logo > a");
             logoUniv.href = "#tab10";
             logoUniv.target = "";
