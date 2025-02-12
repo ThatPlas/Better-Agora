@@ -14,14 +14,17 @@ function calculMoyenneMatiere(listeNotesDonnee) {
 var headPointer = document.head;
 headPointer.innerHTML += `<link rel="stylesheet" type="text/css" href="https://eythantournant.github.io/Better-Agora/css/main.css">`
 
-/* Rend la barre collante par défaut pour éviter les sauts de page */
-barreHaute = document.querySelector("#section0");
-barreHaute.classList.add("fixed-header");
 
-/* Fait en sorte que le logo renvoie à l'accueil */
+
+/* Dès que la page finit de charger */
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
         setTimeout(function() {
+            /* Rend la barre collante par défaut pour éviter les sauts de page */
+            barreHaute = document.querySelector("#section0");
+            barreHaute.classList.add("fixed-header");
+
+            /* Fait en sorte que le logo renvoie à l'accueil */
             logoUniv = document.querySelector("#header-main > div.logo > a");
             logoUniv.href = "#tab10";
             logoUniv.target = "";
@@ -32,7 +35,8 @@ document.onreadystatechange = function () {
 /* Calcul des moyennes dans les notes de matières finies */
 window.navigation.addEventListener("navigate", (event) => {
     setTimeout(function() {
-        if(window.location.href.slice(-6) == "#tab50") { // Si sur la page des notes
+        /* Page des notes */
+        if(window.location.href.slice(-6) == "#tab50") {
             setTimeout(function() { // Délai d'une demi seconde pour pallier le temps de chargement
                 var listeLignesTabNotes = Array.from(document.querySelectorAll("#listTab_6387972114")[0].children[1].children); // Liste de toutes les lignes du tableau de notes
                 var derniereMatiere;
@@ -64,9 +68,25 @@ window.navigation.addEventListener("navigate", (event) => {
     }, 100);
 })
 
-/* Faire calcul d'absences avec compteur d'heures et de nombre, calculant les justifications
-Pour calculer les justifiées, vérifier si le dernier champ est égal à ""
-Rajouter dans le tfoot un tableau en plus qui répertorie chaque colonne sous la forme :
-    _____|_Nombre d'heures_|_Nombre d'absences_|_Non justifiées_
-    Total|                 |                   |
-*/
+window.navigation.addEventListener("navigate", (event) => {
+    setTimeout(function() {
+        /* Page des absences */
+        if(window.location.href.slice(-6) == "#tab60") {
+            setTimeout(function() { // Délai d'une demi seconde pour pallier le temps de chargement
+                var listeLignesTabNotes = Array.from(document.querySelectorAll("#listTab_6387973553")[0].children[1].children); // Liste de toutes les lignes du tableau de notes
+                var nombreAbsences = 0;
+                var nombreJustifiees = 0;
+                var nombreHeures = 0;
+                listeLignesTabNotes.forEach(ligneTabNotes => {
+                    nombreAbsences++;
+                    if(ligneTabNotes.children[6].innerText != "") nombreJustifiees++;
+                    nombreHeures += parseInt(ligneTabNotes.children[3].innerText);
+                });
+                if(nombreHeures > 0) {
+                    var tabFoot = document.querySelectorAll("#listTab_6387973553")[0].children[2];
+                    tabFoot.innerHTML = "<tr><th></th> <th class='dual-row'>Nombre d'heures</th><th></th> <th class='dual-row'>Absences totales</th><th></th> <th class='dual-row'>Absences non justifiées</th><th></th></tr> <tr><th>Total</th> <td class='dual-row'>"+nombreHeures+"h</td><td></td> <td class='dual-row'>"+nombreAbsences+"</td><td></td> <td class='dual-row'>"+(nombreAbsences-nombreJustifiees)+"</td><td></td> </tr>";
+                }
+            }, 256);
+        }
+    }, 100);
+})
