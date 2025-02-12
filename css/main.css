@@ -75,3 +75,7 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
     background: #1d3451;
 }
+
+#listTab_6387973553 tfoot th {
+     background-color:#363636
+}
