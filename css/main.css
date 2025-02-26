@@ -27,6 +27,10 @@ h1 {
     width:8px;
     margin-left:-8px;
 }
+
+.blocNote {
+    float:right;
+}
  
  /* Nettoyage du bouton classique du menu kebab */
 .info-collapse-root .info-collapse .info-collapse-entete .actions-collapse-news .info-collapse-menu-lien:hover {
