@@ -1,3 +1,7 @@
+
+
+/* ---------------- Site du projet ↑ | ↓ Agora ---------------- */
+
 /* Onglet actif du menu remarquable plus facilement */
 nav.row div.prtl-onglet ul li.selected ::before {
     content: "📍 ";
@@ -82,4 +86,13 @@ h1 {
 
 #listTab_6387973553 tfoot th {
      background-color:#BEBEBE;
+}
+
+.blocNote {
+    float:right;
+}
+
+#listTab_6387973553 tfoot th, #listTab_6387973553 tfoot td {
+    font-weight: normal;
+    font-size: 1em;
 }
