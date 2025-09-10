@@ -38,7 +38,7 @@ function affichageBloc(dernierBlocSignet, listeMoyennesDonnee) {
 }
 /* Ajout du CSS principal à la page */
 var headPointer = document.head;
-headPointer.innerHTML += `<link rel="stylesheet" type="text/css" href="https://eythantournant.github.io/Better-Agora/css/main.css"><link rel="icon" type="image/x-icon" href="/images/favicon.ico">`
+headPointer.innerHTML += `<link rel="stylesheet" type="text/css" href="https://thatplas.github.io/Better-Agora/css/main.css"><link rel="icon" type="image/x-icon" href="/images/favicon.ico">`
 
 
 
