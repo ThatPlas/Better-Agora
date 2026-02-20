@@ -96,3 +96,8 @@ h1 {
     font-weight: normal;
     font-size: 1em;
 }
+
+/* Changement de couleurs principale */
+#conteneurPortail #main .header-widgets {
+    background-color: var(--couleur-principale);
+}
