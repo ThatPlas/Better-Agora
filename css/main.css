@@ -97,7 +97,21 @@ h1 {
     font-size: 1em;
 }
 
-/* Changement de couleurs principale */
-#conteneurPortail #main .header-widgets {
+/* Changements de couleur principaux */
+#conteneurPortail #main .header-widgets, div.accordion-container-vertical dl dt, .cell-accueil-news.blocinforesponsive div.blocinfobody .info-collapse-root .info-collapse .info-collapse-entete, ::-webkit-scrollbar-thumb {
     background-color: var(--couleur-principale);
+}
+::-webkit-scrollbar-thumb:hover {
+    background:hsl(from var(--couleur-principale) h 90% 150%)
+}
+div.blocinforesponsive div.blocinfotitle .blocinfo-title-wrapper h1 {
+    color: var(--couleur-principale);
+}
+
+/* Changements de couleur secondaires */
+#conteneurPortail #main .header-mainmenu-trigger .main-trigger:hover, .cell-accueil-news.blocinforesponsive div.blocinfobody .prtl-maintoolbox .toolbox-resp .toolbox-desktab ul.toolbox-actions li a, #conteneurPortail #main header #header .header-main .logout a .btn-logout, input[type="submit"], input[type="button"], table tbody tr td.rupture {
+    background-color: var(--couleur-secondaire);
+}
+a:active, a:link, a:visited, a:hover {
+    color: var(--couleur-secondaire);
 }
